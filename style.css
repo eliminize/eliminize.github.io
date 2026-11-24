@@ -108,6 +108,33 @@ h1 {
   background: var(--ink);
 }
 
+.note {
+  margin: 12px 0 0;
+  color: var(--dim);
+  font-size: 0.9rem;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 18px;
+  margin-top: 28px;
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+nav a {
+  color: var(--dim);
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  color: var(--cyan);
+}
+
 .shots {
   display: flex;
   flex-wrap: wrap;
@@ -131,6 +158,39 @@ h1 {
 
 section {
   margin-top: 48px;
+  scroll-margin-top: 16px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+details {
+  margin: 12px 0;
+}
+
+summary {
+  padding: 8px 12px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  color: var(--acid);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+summary:hover,
+summary:focus-visible {
+  border-color: var(--line2);
+}
+
+details[open] summary {
+  border-bottom-color: var(--line2);
+}
+
+details table {
+  margin: 0;
 }
 
 h2 {
@@ -175,6 +235,12 @@ th {
 td:first-child {
   white-space: nowrap;
   font-weight: 700;
+}
+
+@media (max-width: 480px) {
+  td:first-child {
+    white-space: normal;
+  }
 }
 
 figure {
