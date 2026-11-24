@@ -113,24 +113,20 @@ h1 {
 
 .feedback {
   display: inline-block;
-  padding: 12px 24px;
-  border: 2px solid var(--cyan);
-  color: var(--cyan);
+  padding: 14px 28px;
+  background: var(--cyan);
+  color: var(--bg);
   font-weight: 700;
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   letter-spacing: 0.06em;
   text-decoration: none;
   text-transform: uppercase;
+  clip-path: polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
 }
 
 .feedback:hover,
 .feedback:focus-visible {
-  background: var(--cyan);
-  color: var(--bg);
-}
-
-footer .feedback {
-  margin-top: 14px;
+  background: var(--ink);
 }
 
 .note {
